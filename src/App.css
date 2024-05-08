@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 26px;
+}
+
+.count {
+  width: 150px;
+  background-color: aquamarine;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 5px;
+  margin-top: 150px;
+}
+button {
+  width: 140px;
+  height: 50px;
+  border-radius: 10px;
+  line-height: 1.5;
+  background-color: rgb(21, 197, 65);
+  color: rgb(255, 233, 233);
+  border: 0;
+  cursor: pointer;
+}
+button:hover {
+  color: red;
+}
+.btn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
