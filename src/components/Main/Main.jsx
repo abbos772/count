@@ -11,7 +11,8 @@ function Main() {
     e.preventDefault();
     const number = parseInt(inputValue);
     if (!isNaN(number)) {
-      dispatch(inc("");
+      dispatch(inc(number));
+      setDecrement("");
     }
   };
   return (
@@ -22,7 +23,7 @@ function Main() {
           value={inputValue}
           type="number"
         />
-        <button disabled={!inputValue}>Add</button>
+        <button disabled={!inputValue}>ADD</button>
       </form>
 
       <button onClick={() => dispatch(inc())}>Click</button>
