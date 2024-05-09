@@ -2,24 +2,29 @@ import React, { useState } from "react";
 import { inc } from "../../context/counter";
 import { dec } from "../../context/counter";
 import { res } from "../../context/counter";
+import { inp } from "../../context/counter";
 import { useDispatch } from "react-redux";
 function Main() {
   let dispatch = useDispatch();
-  const [num, setCount] = useState("");
-  const handleInputChange = (event) => {
-    const inputNumber = parseInt(event.target.value);
-    if (!isNaN(inputNumber)) {
-      setCount(inc);
+  let [inputValue, setDecrement] = useState("");
+  const decrement = (e) => {
+    e.preventDefault();
+    const number = parseInt(inputValue);
+    if (!isNaN(number)) {
+      dispatch(inc("");
     }
   };
-
   return (
     <div className="btn">
-      <div>
-        <form action="">
-          <input onChange={(e) => setCount(e.target.value)} type="number" />
-        </form>
-      </div>
+      <form onSubmit={decrement} action="">
+        <input
+          onChange={(e) => setDecrement(e.target.value)}
+          value={inputValue}
+          type="number"
+        />
+        <button disabled={!inputValue}>Add</button>
+      </form>
+
       <button onClick={() => dispatch(inc())}>Click</button>
       <button onClick={() => dispatch(dec())}>Dec</button>
       <button onClick={() => dispatch(res())}>Res</button>
