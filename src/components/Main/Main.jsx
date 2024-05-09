@@ -26,7 +26,7 @@ function Main() {
         <button disabled={!inputValue}>ADD</button>
       </form>
 
-      <button onClick={() => dispatch(inc())}>Click</button>
+      <button onClick={() => dispatch(inc(1))}>Click</button>
       <button onClick={() => dispatch(dec())}>Dec</button>
       <button onClick={() => dispatch(res())}>Res</button>
     </div>
